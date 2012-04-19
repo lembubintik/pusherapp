@@ -15,9 +15,9 @@ return array(
 		'host' => 'http://api.pusherapp.com',
 		'port' => 80,
 		'timeout' => 30,
-		'auth_key' => '9c42a206e8304f63bc6e',
-		'secret' => '76e805866e5e86bca389',
-		'app_id' => '18816',
+		'auth_key' => 'YOUR KEY',
+		'secret' => 'SECRET VALUE',
+		'app_id' => 'APP ID',
 	),
 );
 
