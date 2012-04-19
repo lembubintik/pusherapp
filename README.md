@@ -7,6 +7,7 @@ How To Use It
 -------------
 
 1) Place the directory inside fuel/packages
+
 2) Load the package by adding it to fuelphp config file
 	
 	'always_load'  => array(
