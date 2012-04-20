@@ -34,6 +34,13 @@ class Instance
 		\Config::load('pusher', true);
 	}
 	
+	/**
+	 * Initiate Pusher instance for singleton method
+	 *
+	 * @access    public
+	 * @param  boolean 
+	 * @return static
+	 */
 	public static function forge($debug = false)
 	{
 		$config = \Config::get('pusher.pusher');
@@ -51,6 +58,17 @@ class Instance
 		);
 		
 		return static::$_instance;
+	}
+	
+	/**
+	 * Set instance for mock up
+	 *
+	 * @access    public
+	 * @return static
+	 */
+	public static function instance($pusher)
+	{
+		return static::$_instance = $pusher;
 	}
 }
 
