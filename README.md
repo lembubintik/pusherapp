@@ -1,36 +1,40 @@
 FuelPHP Pusher Package
 ======================
 
-This is based on the Pusher PHP generic library (https://github.com/squeeks/Pusher-PHP).
+This is based on the [https://github.com/squeeks/Pusher-PHP](Pusher PHP generic library).
 
 How To Use It
 -------------
 
 1) Place the directory inside fuel/packages
 
-2) Load the package by adding it to fuelphp config file
+2) Load the package by adding it to the 'Always Load Packages' in your `app/config/config.php`
 	
-	'always_load'  => array(
+```php
+<?php
+'always_load'  => array(
 
-		/**
-		 * These packages are loaded on Fuel's startup.  You can specify them in
-		 * the following manner:
-		 *
-		 * array('auth'); // This will assume the packages are in PKGPATH
-		 *
-		 * // Use this format to specify the path to the package explicitly
-		 * array(
-		 *     array('auth'	=> PKGPATH.'auth/')
-		 * );
-		 */
-		'packages'  => array(
-			//'orm',
-			'pusherapp',
-		),
-3) Using it is very simple
+	...
+
+	'packages'  => array(
+		//'orm'
+		'pusherapp',
+	),
+
+	...
+), ?>
+```
+
+3) You can now load up an instance of Pusher with:
 	
-	\Pusherapp\Instance::forge()->trigger('channel_name', 'event_name', 'data');
+```php
+<?php
+\Pusherapp::forge()->trigger('channel_name', 'event_name', 'data');
+```
 
-4) If you want to enable the debugging mode
+4) Enable debugging mode by passing `true` to `forge()`:
 
-	\Pusherapp\Instance::forge(true)->trigger('channel_name', 'event_name', 'data');
+```php
+<?php
+\Pusherapp::forge(true)->trigger('channel_name', 'event_name', 'data');
+```

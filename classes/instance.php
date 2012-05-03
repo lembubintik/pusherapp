@@ -18,7 +18,7 @@ use Pusher;
 
 class PusherException extends \FuelException {}
 
-class Instance
+class Pusherapp
 {
 	private static $_instance = null;
 	

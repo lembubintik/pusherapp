@@ -13,7 +13,7 @@
 Autoloader::add_core_namespace('Pusherapp');
 
 Autoloader::add_classes(array(
-	'Pusherapp\\Instance' => __DIR__.'/classes/instance.php',
+	'Pusherapp\\Pusherapp' => __DIR__.'/classes/instance.php',
 	'Pusherapp\\PusherException' => __DIR__.'/classes/instance.php',
 ));
 
