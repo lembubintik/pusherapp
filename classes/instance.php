@@ -43,7 +43,7 @@ class Pusherapp
 	 */
 	public static function forge($debug = false)
 	{
-		$config = \Config::get('pusher.pusher');
+		$config = \Config::get('pusher');
 		
 		if (static::$_instance != null) return static::$_instance;
 		
